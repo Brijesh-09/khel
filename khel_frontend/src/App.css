@@ -73,3 +73,74 @@
   padding: 20px;
   
 }
+.hero-buttons{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap:10px;
+  
+  
+  
+}
+.button-1{
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #cddc39; /* Greenish color */
+  color: black;
+}
+
+.button-2{
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: 2px solid #cddc39; /* Outline style for Action 2 */;
+  cursor: pointer;
+  font-size: 0.9rem; /* Greenish color */
+  color: black;
+
+}
+
+   .container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional: To show the container boundaries */
+    column-gap: 20px;
+  }
+  
+  .col {
+    flex: 1;
+    padding: 40px;
+  }
+  
+  .image-col img {
+    width: 100%; /* Ensures image fills the left column */
+    height: auto; /* Keeps the aspect ratio */
+     /* Adds a border around the image */
+     /* Optional: Adds rounded corners */
+    max-height: 400px;
+  }
+  
+  .text-col {
+    padding-left: 20px;
+  }
+  
+  .text-col h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .text-col p {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .text-col h2 + p {
+    margin-top: 10px; /* Adds spacing between title and description */
+  }
+  
+
+
