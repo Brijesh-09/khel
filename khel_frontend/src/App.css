@@ -1,3 +1,4 @@
+/* Navbar Styles */
 .navbar {
   display: flex;
   align-items: center;
@@ -5,33 +6,43 @@
   padding: 1rem 2rem;
   background-color: white;
   border-bottom: 2px solid #eaeaea;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; /* Ensure the navbar spans full width */
+  z-index: 1000;
+  height: 60px; /* Define a height for the navbar */
 }
 
+/* Ensure the logo is centered and adjusts with screen size */
 .navbar-logo img {
-  height: 40px; /* Adjust the height of the logo */
-  margin-right: 40px;
+  height: 40px;
+  margin-right: 20px; /* Reduced to avoid pushing links too far */
 }
 
 .navbar-links {
-  flex: 1; /* Allows the links to center in the navbar */
   display: flex;
   justify-content: flex-start;
-  gap: 2rem; /* Adds space between each link */
+  gap: 2rem;
+  flex: 1; /* Ensures the links stretch across */
+  align-items: center; /* Vertically center links */
 }
 
 .navbar-links a {
   color: black;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .navbar-links a:hover {
-  color: #555; /* Hover effect for links */
+  color: #555;
 }
 
 .navbar-actions {
   display: flex;
-  gap: 1rem; /* Space between action buttons */
+  gap: 1rem;
+  align-items: center; /* Center action buttons vertically */
 }
 
 .action-btn {
@@ -40,16 +51,17 @@
   border: none;
   cursor: pointer;
   font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .action-btn.primary {
-  background-color: #cddc39; /* Greenish color */
+  background-color: #cddc39;
   color: black;
 }
 
 .action-btn.secondary {
   background-color: transparent;
-  border: 2px solid #cddc39; /* Outline style for Action 2 */
+  border: 2px solid #cddc39;
   color: #cddc39;
 }
 
@@ -59,90 +71,93 @@
   color: white;
 }
 
+/* Add padding to the content to prevent overlap */
+.App {
+  padding-top: 80px; /* Enough space to push content below the fixed navbar */
+}
 
-.hero{
+/* Hero Section */
+.hero {
   font-size: 40px;
   text-align: center;
-  padding: 20px;
+  padding-top: 100px;
   font-weight: bold;
 }
 
-.hero-text{
+.hero-text {
   font-size: 20px;
   text-align: center;
   padding: 20px;
-  
 }
-.hero-buttons{
+
+.hero-buttons {
   display: flex;
   justify-content: center;
   padding: 20px;
-  gap:10px;
-  
-  
-  
+  gap: 10px;
 }
-.button-1{
+
+/* Button Styles */
+.button-1,
+.button-2 {
   padding: 0.5rem 1rem;
   font-weight: bold;
   border: none;
   cursor: pointer;
   font-size: 0.9rem;
-  background-color: #cddc39; /* Greenish color */
+}
+
+.button-1 {
+  background-color: #cddc39;
   color: black;
 }
 
-.button-2{
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  border: 2px solid #cddc39; /* Outline style for Action 2 */;
-  cursor: pointer;
-  font-size: 0.9rem; /* Greenish color */
+.button-2 {
+  background-color: transparent;
+  border: 2px solid #cddc39;
   color: black;
-
 }
 
-   .container {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ddd; /* Optional: To show the container boundaries */
-    column-gap: 20px;
-  }
-  
-  .col {
-    flex: 1;
-    padding: 40px;
-  }
-  
-  .image-col img {
-    width: 100%; /* Ensures image fills the left column */
-    height: auto; /* Keeps the aspect ratio */
-     /* Adds a border around the image */
-     /* Optional: Adds rounded corners */
-    max-height: 400px;
-  }
-  
-  .text-col {
-    padding-left: 20px;
-  }
-  
-  .text-col h2 {
-    margin: 0;
-    font-size: 1.5em;
-    color: #333;
-  }
-  
-  .text-col p {
-    font-size: 1em;
-    color: #666;
-  }
-  
-  .text-col h2 + p {
-    margin-top: 10px; /* Adds spacing between title and description */
-  }
-  
-/* App.css or HeroSection.css */
+/* Grid Layout and Container Fixes */
+.container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  column-gap: 20px;
+}
+
+.col {
+  flex: 1;
+  padding: 40px;
+}
+
+.image-col img {
+  width: 100%;
+  max-height: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text-col {
+  padding-left: 20px;
+}
+
+.text-col h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.text-col p {
+  font-size: 1em;
+  color: #666;
+}
+
+.text-col h2 + p {
+  margin-top: 10px;
+}
+
+/* Image Grid */
 .image-container img {
   width: 100%;
   max-width: 500px;
@@ -153,3 +168,162 @@
   margin: 0 auto;
 }
 
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.grid-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Footer Styles */
+.footer {
+  padding: 2rem 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsletter-section {
+  margin-bottom: 2rem;
+}
+
+.newsletter-text {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-input-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.email-input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+}
+
+.subscribe-button {
+  padding: 0.5rem 1rem;
+  background-color:  #cddc39;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.newsletter-subtext {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Footer Links Grid */
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-column {
+  min-width: 0;
+}
+
+.footer-heading {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-list a {
+  color: #4b5563;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.footer-list a:hover {
+  color: #111827;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.bottom-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.bottom-links a,
+.cookie-settings {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.cookie-settings {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.bottom-links a:hover,
+.cookie-settings:hover {
+  color: #111827;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .newsletter-input-group {
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links-grid {
+    grid-template-columns: 1fr;
+  }
+}

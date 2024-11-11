@@ -9,9 +9,9 @@ function Navbar() {
       </div>
       <div className="navbar-links">
         <a href="/">Home</a>
-        <a href="/activities">Activities</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        {/* <a href="/activities">Activities</a> */}
+        <a href="#about">About</a>
+        {/* <a href="/contact">Contact</a> */}
       </div>
       <div className="navbar-actions">
         <button className="action-btn primary">Join Now</button>
