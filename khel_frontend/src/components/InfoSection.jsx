@@ -4,7 +4,7 @@ import "../App.css"
 
 function InfoSection() {
   return (
-    <div className="container">
+    <div className="container"  id='about'>
       <div className="col image-col">
         <img src={youthImage} alt="Youth" />
       </div>
